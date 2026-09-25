@@ -5,7 +5,7 @@
 * We plan to establish our presence in **multiple locations around the world** as we continue to grow.
 
 # About us
-We have been in this business for **over six years**. Throughout our journey, we have remained committed to respecting our clients, protecting their privacy, and maintaining professional relationships built on trust.
+We have been in this business for **over 6 years**. Throughout our journey, we have remained committed to respecting our clients, protecting their privacy, and maintaining professional relationships built on trust.
 
 # The Role of Both Sides
 We do the all the works.
