@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEXATECH | Global Tech Partnerships Built on Trust</title>
+  <meta name="description" content="NEXATECH bridges global tech talent with European and American partnerships. Expanding from a nationwide presence to a global market through trust, transparency, and shared success.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="theme-warm">
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress-container" aria-hidden="true">
+    <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+  </div>
+
+  <!-- Cityscape Background Layer with Parallax & Canvas Engine -->
+  <div class="city-bg-wrapper" aria-hidden="true">
+    <div class="city-bg-image" id="cityBgImage" style="background-image: url('images/singapore-bg.jpg');"></div>
+    <div class="city-bg-overlay"></div>
+    <canvas id="atmosphereCanvas" class="atmosphere-canvas"></canvas>
+  </div>
+
+  <!-- Sticky Glassmorphism Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+      <a href="#hero" class="brand-logo" aria-label="NEXATECH Home">
+        <svg class="nt-logo-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="warmGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#FBBF24" />
+              <stop offset="50%" stop-color="#F59E0B" />
+              <stop offset="100%" stop-color="#E27D60" />
+            </linearGradient>
+            <linearGradient id="roseAccentGrad" x1="100%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#FCD34D" />
+              <stop offset="100%" stop-color="#EA580C" />
+            </linearGradient>
+            <filter id="logoGlow" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="3" result="blur" />
+              <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            </filter>
+          </defs>
+          <!-- Hexagonal Soft Background Shield -->
+          <rect x="4" y="4" width="40" height="40" rx="12" fill="rgba(245, 158, 11, 0.12)" stroke="url(#warmGoldGrad)" stroke-width="1.5" />
+          <!-- Harmonized 'N' and 'T' Monogram -->
+          <!-- Left Leg of N -->
+          <path d="M14 34V14" stroke="url(#warmGoldGrad)" stroke-width="3.5" stroke-linecap="round" />
+          <!-- Diagonal of N and base crossing -->
+          <path d="M14 15L26 33" stroke="url(#warmGoldGrad)" stroke-width="3.5" stroke-linecap="round" />
+          <!-- Right Stem of N combined into the Stem of T -->
+          <path d="M26 14V34" stroke="url(#roseAccentGrad)" stroke-width="3.5" stroke-linecap="round" />
+          <!-- Top Bar of T extending across -->
+          <path d="M20 14H35" stroke="url(#roseAccentGrad)" stroke-width="3.5" stroke-linecap="round" />
+          <!-- Glowing Sparkle Dot at T intersection -->
+          <circle cx="26" cy="14" r="2.5" fill="#FFFBEB" filter="url(#logoGlow)" />
+        </svg>
+        <span class="brand-name">NEXA<span class="brand-highlight">TECH</span></span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#goal" class="nav-link">Our Goal</a></li>
+          <li><a href="#about" class="nav-link">About Us</a></li>
+          <li><a href="#roles" class="nav-link">Partnership</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#faq" class="nav-link">FAQs</a></li>
+          <li><a href="#contact" class="nav-link cta-nav-link">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-drawer" id="mobileDrawer">
+      <ul class="mobile-nav-links">
+        <li><a href="#hero" class="mobile-nav-link">Home</a></li>
+        <li><a href="#goal" class="mobile-nav-link">Our Goal</a></li>
+        <li><a href="#about" class="mobile-nav-link">About Us</a></li>
+        <li><a href="#roles" class="mobile-nav-link">Partnership</a></li>
+        <li><a href="#experience" class="mobile-nav-link">Experience</a></li>
+        <li><a href="#faq" class="mobile-nav-link">FAQs</a></li>
+        <li><a href="#contact" class="mobile-nav-link mobile-cta-link">Contact Us</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Main Single Page Content -->
+  <main>
+
+    <!-- 1. HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="hero-content zoom-on-scroll">
+        <div class="hero-badge animate-float">
+          <span class="badge-dot pulse-animation"></span>
+          <span class="badge-text">Expanding Worldwide &bull; Active Partnerships Open</span>
+        </div>
+
+        <h1 class="hero-title">
+          Connecting Global Talent,<br>
+          <span class="text-gradient-warm">Expanding Worldwide.</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Over six years of delivering high-impact software engineering, AI systems, and cloud infrastructure. We partner with forward-thinking individuals across Europe and America to build long-term, trustworthy, and mutually rewarding collaborations.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#roles" class="btn btn-primary shimmer-effect">
+            <span>Explore The Partnership</span>
+            <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </a>
+          <a href="#experience" class="btn btn-glass">
+            <span>View Upwork Track Record</span>
+            <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/></svg>
+          </a>
+        </div>
+
+        <!-- Trust Stats Bar -->
+        <div class="hero-stats-grid">
+          <div class="stat-card glass-panel tilt-card">
+            <div class="stat-icon-wrap warm-glow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <div class="stat-content">
+              <div class="stat-number" data-target="6">6+</div>
+              <div class="stat-label">Years of Proven Business</div>
+            </div>
+          </div>
+
+          <div class="stat-card glass-panel tilt-card">
+            <div class="stat-icon-wrap warm-glow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            </div>
+            <div class="stat-content">
+              <div class="stat-number">100%</div>
+              <div class="stat-label">Supervised & Safe Payouts</div>
+            </div>
+          </div>
+
+          <div class="stat-card glass-panel tilt-card">
+            <div class="stat-icon-wrap warm-glow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <div class="stat-content">
+              <div class="stat-number">Global</div>
+              <div class="stat-label">Marketplace Expansion</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll-indicator" aria-hidden="true">
+        <span class="mouse-icon"><span class="mouse-wheel"></span></span>
+        <span class="scroll-hint">Scroll to explore</span>
+      </div>
+    </section>
+
+    <!-- 2. OUR GOAL SECTION -->
+    <section class="content-section" id="goal">
+      <div class="section-container">
+        <div class="section-header zoom-on-scroll">
+          <span class="section-tag">Vision & Roadmap</span>
+          <h2 class="section-title">Our Goal</h2>
+          <div class="section-title-line"></div>
+          <p class="section-lead">
+            Scaling boundaries and building a resilient international network.
+          </p>
+        </div>
+
+        <div class="goals-grid">
+          <div class="goal-card glass-panel zoom-on-scroll tilt-card">
+            <div class="goal-icon-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+            </div>
+            <h3 class="goal-title">Nationwide to Global Market</h3>
+            <p class="goal-desc">
+              Our goal is to expand our marketplace from a <strong>nationwide presence to a global market</strong>. We connect exceptional engineering with international client demand, fostering worldwide opportunities.
+            </p>
+            <div class="goal-feature-list">
+              <div class="feature-item"><span class="check-bullet">&#10003;</span> International client reach</div>
+              <div class="feature-item"><span class="check-bullet">&#10003;</span> Seamless cross-border collaboration</div>
+            </div>
+          </div>
+
+          <div class="goal-card glass-panel zoom-on-scroll tilt-card" style="transition-delay: 0.15s;">
+            <div class="goal-icon-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <h3 class="goal-title">Multiple Worldwide Locations</h3>
+            <p class="goal-desc">
+              We plan to establish our presence in <strong>multiple locations around the world</strong> as we continue to grow. Through trusted local partners in Europe, America and beyond, we bridge time zones and cultures smoothly.
+            </p>
+            <div class="goal-feature-list">
+              <div class="feature-item"><span class="check-bullet">&#10003;</span> Distributed partner nodes</div>
+              <div class="feature-item"><span class="check-bullet">&#10003;</span> Sustainable long-term presence</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Global Expansion Interactive Map Visualizer -->
+        <div class="global-expansion-banner glass-panel zoom-on-scroll">
+          <div class="expansion-graphic">
+            <div class="pulse-node node-asia" title="Asia Tech Hub">
+              <span class="node-ring"></span>
+              <span class="node-label">Asia Tech Hub</span>
+            </div>
+            <div class="connection-line-svg">
+              <svg width="100%" height="100%" viewBox="0 0 600 120" preserveAspectRatio="none">
+                <path d="M 120,60 C 260,10 340,200 480,60" fill="none" stroke="url(#warmGoldGrad)" stroke-width="3" stroke-dasharray="6,6" class="animated-path" />
+              </svg>
+            </div>
+            <div class="pulse-node node-europe" title="European Partners">
+              <span class="node-ring"></span>
+              <span class="node-label">European/American Partners</span>
+            </div>
+          </div>
+          <div class="expansion-text">
+            <h4>A True Win-Win Bridge</h4>
+            <p>Combining world-class engineering execution with trusted European and American partnership infrastructure.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. ABOUT US SECTION -->
+    <section class="content-section" id="about">
+      <div class="section-container">
+        <div class="section-header zoom-on-scroll">
+          <span class="section-tag">Who We Are</span>
+          <h2 class="section-title">About Us</h2>
+          <div class="section-title-line"></div>
+          <p class="section-lead">
+            Over six years of dedication, craftsmanship, and unyielding commitment to our partners and clients.
+          </p>
+        </div>
+
+        <div class="about-hero-box glass-panel zoom-on-scroll">
+          <div class="about-story-text">
+            <div class="quote-symbol">&ldquo;</div>
+            <p class="primary-quote">
+              We have been in this business for <strong>over six years</strong>. Throughout our journey, we have remained committed to respecting our clients, protecting their privacy, and maintaining professional relationships built on trust.
+            </p>
+            <p class="quote-sub">
+              Our team consists of passionate, seasoned engineers who believe that open transparency and mutual respect are the only foundation for enduring prosperity.
+            </p>
+          </div>
+        </div>
+
+        <!-- Core Services We Deliver -->
+        <div class="services-wrapper zoom-on-scroll">
+          <h3 class="subsection-title">Full-Spectrum Development Capabilities</h3>
+          <p class="services-intro">What kinds of work does our team do? We handle every stage from architecture and UI implementation to testing, deployment, and ongoing maintenance:</p>
+
+          <div class="services-grid">
+            <div class="service-chip glass-panel tilt-card">
+              <div class="service-icon">&#128187;</div>
+              <div class="service-info">
+                <h4>Web Development</h4>
+                <p>Modern responsive frontends, interactive applications, and performant web portals.</p>
+              </div>
+            </div>
+
+            <div class="service-chip glass-panel tilt-card">
+              <div class="service-icon">&#128241;</div>
+              <div class="service-info">
+                <h4>Android Applications</h4>
+                <p>Native & hybrid mobile applications built for smooth performance and scalability.</p>
+              </div>
+            </div>
+
+            <div class="service-chip glass-panel tilt-card">
+              <div class="service-icon">&#129302;</div>
+              <div class="service-info">
+                <h4>AI-Powered Systems</h4>
+                <p>LLM integrations, intelligent workflow automation, and custom machine learning pipelines.</p>
+              </div>
+            </div>
+
+            <div class="service-chip glass-panel tilt-card">
+              <div class="service-icon">&#9881;</div>
+              <div class="service-info">
+                <h4>Backend & APIs</h4>
+                <p>High-throughput microservices, robust REST/GraphQL APIs, and secure architecture.</p>
+              </div>
+            </div>
+
+            <div class="service-chip glass-panel tilt-card">
+              <div class="service-icon">&#128451;</div>
+              <div class="service-info">
+                <h4>Database Development</h4>
+                <p>Relational & NoSQL database design, indexing, optimization, and reliable migrations.</p>
+              </div>
+            </div>
+
+            <div class="service-chip glass-panel tilt-card">
+              <div class="service-icon">&#9729;</div>
+              <div class="service-info">
+                <h4>DevOps & Cloud</h4>
+                <p>CI/CD pipelines, Docker, Kubernetes, AWS/GCP, and automated zero-downtime releases.</p>
+              </div>
+            </div>
+
+            <div class="service-chip glass-panel tilt-card">
+              <div class="service-icon">&#127912;</div>
+              <div class="service-info">
+                <h4>UI Implementation</h4>
+                <p>Pixel-perfect translations of Figma designs, smooth motion, and accessible user experiences.</p>
+              </div>
+            </div>
+
+            <div class="service-chip glass-panel tilt-card">
+              <div class="service-icon">&#128737;</div>
+              <div class="service-info">
+                <h4>Testing & Maintenance</h4>
+                <p>Automated QA, regression testing, bug fixing, and continuous 24/7 technical support.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. THE ROLE OF BOTH SIDES SECTION -->
+    <section class="content-section" id="roles">
+      <div class="section-container">
+        <div class="section-header zoom-on-scroll">
+          <span class="section-tag">Clear Partnership Breakdown</span>
+          <h2 class="section-title">The Role of Both Sides</h2>
+          <div class="section-title-line"></div>
+          <p class="section-lead">
+            We handle 100% of the technical and client work. You simply manage the verified environment and receive the payouts.
+          </p>
+        </div>
+
+        <div class="roles-comparison-grid">
+          <!-- NEXATECH Role Card -->
+          <div class="role-card role-card-team glass-panel zoom-on-scroll tilt-card">
+            <div class="role-badge">Our Team &bull; NEXATECH</div>
+            <h3 class="role-title">We do all the works.</h3>
+            <p class="role-summary">
+              You never have to write code, speak to technical clients, or worry about software development deadlines.
+            </p>
+            <ul class="role-checklist">
+              <li>
+                <span class="role-check">&#10004;</span>
+                <div>
+                  <strong>Software & Architecture:</strong> Building web, mobile, AI, and backend projects from initial planning to completion.
+                </div>
+              </li>
+              <li>
+                <span class="role-check">&#10004;</span>
+                <div>
+                  <strong>Client Delivery & Milestones:</strong> Handling all communication, pull requests, deployments, and client requirements.
+                </div>
+              </li>
+              <li>
+                <span class="role-check">&#10004;</span>
+                <div>
+                  <strong>Testing & Bug Fixing:</strong> Ongoing quality assurance, maintenance, and bug fixes around the clock.
+                </div>
+              </li>
+              <li>
+                <span class="role-check">&#10004;</span>
+                <div>
+                  <strong>Hardware Upgrade Support:</strong> Purchasing a dedicated, brand-new computer for you after 1–2 months.
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Partner Role Card -->
+          <div class="role-card role-card-partner glass-panel zoom-on-scroll tilt-card" style="transition-delay: 0.15s;">
+            <div class="role-badge badge-partner">Your Role &bull; Valued Partner</div>
+            <h3 class="role-title">All you need to do:</h3>
+            <p class="role-summary">
+              Creating account and allowing us to work on your computer by remote and sharing money from client is all you need.
+            </p>
+            <ul class="role-checklist">
+              <li>
+                <span class="role-check role-check-warm">&#10004;</span>
+                <div>
+                  <strong>Step 1: Create Account:</strong> Create your account on your computer.
+                </div>
+              </li>
+              <li>
+                <span class="role-check role-check-warm">&#10004;</span>
+                <div>
+                  <strong>Step 2: Verify Securely:</strong> Verify your account and make sure that it is completely secure.
+                </div>
+              </li>
+              <li>
+                <span class="role-check role-check-warm">&#10004;</span>
+                <div>
+                  <strong>Step 3: VMware Remote Access:</strong> Install VMware and allow us to work on your computer and manage the required work environment, keeping it powered on when remote access is required.
+                </div>
+              </li>
+              <li>
+                <span class="role-check role-check-warm">&#10004;</span>
+                <div>
+                  <strong>Step 4: Receive & Share Payment:</strong> Notify us when the client payment arrives in your bank account, and share the agreed amount with us.
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Highlight Banner -->
+        <div class="assurance-banner glass-panel zoom-on-scroll">
+          <div class="assurance-icon">&#128274;</div>
+          <div class="assurance-content">
+            <h4>No Technical Knowledge Required &bull; Full Financial Control</h4>
+            <p>All payments land directly in your own bank account first. You retain 100% control of the funds before sharing the agreed amount with us.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. THE PROVEN EXPERIENCE SECTION -->
+    <section class="content-section" id="experience">
+      <div class="section-container">
+        <div class="section-header zoom-on-scroll">
+          <span class="section-tag">Verified Track Record</span>
+          <h2 class="section-title">The Proven Experience</h2>
+          <div class="section-title-line"></div>
+          <p class="section-lead">
+            Here are authentic Upwork account screenshots proving our multi-year experience, client satisfaction, and consistent high earnings.
+          </p>
+        </div>
+
+        <p class="gallery-hint zoom-on-scroll">
+          <span class="hint-icon">&#128065;</span> Click any screenshot below to open high-resolution interactive zoom & pan viewer
+        </p>
+
+        <!-- Upwork Screenshots Grid -->
+        <div class="screenshots-grid">
+          <!-- Screenshot 1 -->
+          <div class="screenshot-card glass-panel zoom-on-scroll tilt-card" data-index="0">
+            <div class="screenshot-thumb-wrap">
+              <img src="profile1.png" alt="Upwork Verified Profile Screenshot 1 - Track record and experience" class="screenshot-img" loading="lazy">
+              <div class="screenshot-overlay">
+                <span class="zoom-cta-pill">
+                  <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"/><path fill-rule="evenodd" d="M8 6a1 1 0 011 1v1h1a1 1 0 110 2H9v1a1 1 0 11-2 0v-1H6a1 1 0 110-2h1V7a1 1 0 011-1z" clip-rule="evenodd"/></svg>
+                  Click to Zoom
+                </span>
+              </div>
+            </div>
+            <div class="screenshot-meta">
+              <div class="screenshot-title">Upwork Profile & Track Record #1</div>
+              <div class="screenshot-badges">
+                <span class="pill-tag">&#9733; Top Rated</span>
+                <span class="pill-tag pill-success">&#10003; 100% Job Success</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Screenshot 2 -->
+          <div class="screenshot-card glass-panel zoom-on-scroll tilt-card" data-index="1" style="transition-delay: 0.1s;">
+            <div class="screenshot-thumb-wrap">
+              <img src="profile2.png" alt="Upwork Verified Profile Screenshot 2 - Work history and earnings" class="screenshot-img" loading="lazy">
+              <div class="screenshot-overlay">
+                <span class="zoom-cta-pill">
+                  <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"/><path fill-rule="evenodd" d="M8 6a1 1 0 011 1v1h1a1 1 0 110 2H9v1a1 1 0 11-2 0v-1H6a1 1 0 110-2h1V7a1 1 0 011-1z" clip-rule="evenodd"/></svg>
+                  Click to Zoom
+                </span>
+              </div>
+            </div>
+            <div class="screenshot-meta">
+              <div class="screenshot-title">Upwork Profile & Track Record #2</div>
+              <div class="screenshot-badges">
+                <span class="pill-tag">&#128176; High Earnings</span>
+                <span class="pill-tag pill-success">&#10003; Verified Client Feedback</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Screenshot 3 -->
+          <div class="screenshot-card glass-panel zoom-on-scroll tilt-card" data-index="2" style="transition-delay: 0.2s;">
+            <div class="screenshot-thumb-wrap">
+              <img src="profile3.png" alt="Upwork Verified Profile Screenshot 3 - Completed jobs and reviews" class="screenshot-img" loading="lazy">
+              <div class="screenshot-overlay">
+                <span class="zoom-cta-pill">
+                  <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"/><path fill-rule="evenodd" d="M8 6a1 1 0 011 1v1h1a1 1 0 110 2H9v1a1 1 0 11-2 0v-1H6a1 1 0 110-2h1V7a1 1 0 011-1z" clip-rule="evenodd"/></svg>
+                  Click to Zoom
+                </span>
+              </div>
+            </div>
+            <div class="screenshot-meta">
+              <div class="screenshot-title">Upwork Profile & Track Record #3</div>
+              <div class="screenshot-badges">
+                <span class="pill-tag">&#11088; 5.0 Star Ratings</span>
+                <span class="pill-tag pill-success">&#10003; Long-Term Contracts</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Screenshot 4 -->
+          <div class="screenshot-card glass-panel zoom-on-scroll tilt-card" data-index="3" style="transition-delay: 0.3s;">
+            <div class="screenshot-thumb-wrap">
+              <img src="profile4.png" alt="Upwork Verified Profile Screenshot 4 - Portfolio and client endorsements" class="screenshot-img" loading="lazy">
+              <div class="screenshot-overlay">
+                <span class="zoom-cta-pill">
+                  <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"/><path fill-rule="evenodd" d="M8 6a1 1 0 011 1v1h1a1 1 0 110 2H9v1a1 1 0 11-2 0v-1H6a1 1 0 110-2h1V7a1 1 0 011-1z" clip-rule="evenodd"/></svg>
+                  Click to Zoom
+                </span>
+              </div>
+            </div>
+            <div class="screenshot-meta">
+              <div class="screenshot-title">Upwork Profile & Track Record #4</div>
+              <div class="screenshot-badges">
+                <span class="pill-tag">&#9879; Specialized Skills</span>
+                <span class="pill-tag pill-success">&#10003; Continuous Deliveries</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. FAQS SECTION (ALL 10 FROM req.md) -->
+    <section class="content-section" id="faq">
+      <div class="section-container">
+        <div class="section-header zoom-on-scroll">
+          <span class="section-tag">Got Questions?</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <div class="section-title-line"></div>
+          <p class="section-lead">
+            Transparent answers regarding our partnership model, data privacy, payments, and workflow.
+          </p>
+        </div>
+
+        <div class="faq-search-wrap zoom-on-scroll">
+          <svg class="search-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"/></svg>
+          <input type="text" id="faqSearchInput" placeholder="Filter questions (e.g. VMware, payment, computer, trust)..." aria-label="Search FAQs">
+        </div>
+
+        <div class="faq-accordion" id="faqAccordion">
+
+          <!-- FAQ 1 -->
+          <div class="faq-item glass-panel zoom-on-scroll">
+            <button class="faq-question" aria-expanded="false">
+              <span class="faq-number">01</span>
+              <span class="faq-title-text">Why are we looking for a partner?</span>
+              <span class="faq-chevron">&#9662;</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>Over the years, our team has grown steadily, and we’ve had the privilege of working with clients from different parts of the world.</p>
+                <p>As our projects have expanded, we’ve learned how valuable it is to have a trustworthy partner in Europe and America—someone who can help us bridge the gap between our team and our European and American clients.</p>
+                <p>On the other hand, salaries for IT developers in our country are generally lower than in Europe and America. Our goal has always been to create partnerships where both sides can benefit fairly. We believe that when trust and transparency come first, both partners can grow together in a stable, long-term relationship.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item glass-panel zoom-on-scroll">
+            <button class="faq-question" aria-expanded="false">
+              <span class="faq-number">02</span>
+              <span class="faq-title-text">Why are we going to use your account?</span>
+              <span class="faq-chevron">&#9662;</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>As mentioned above, salaries in Asian countries are generally lower than in Europe or America.</p>
+                <p>To earn more money while working in the same environment, we need to use your account.</p>
+                <p>We will not use your account for any bad or illegal purpose, and you can check what we are doing in real time.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item glass-panel zoom-on-scroll">
+            <button class="faq-question" aria-expanded="false">
+              <span class="faq-number">03</span>
+              <span class="faq-title-text">Why are we going to use your computer?</span>
+              <span class="faq-chevron">&#9662;</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>Many freelance websites have systems that detect users based on their IP addresses.</p>
+                <p>Therefore, we need to use your IP address through your computer.</p>
+                <p>You may be worried about your personal data if we use your computer. Don’t worry. With a simple option, you can make sure that we cannot access your personal data. I will explain this method in the following question.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item glass-panel zoom-on-scroll">
+            <button class="faq-question" aria-expanded="false">
+              <span class="faq-number">04</span>
+              <span class="faq-title-text">How do we make sure your personal data is safe?</span>
+              <span class="faq-chevron">&#9662;</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>At first, we will work on your computer remotely. If we tell you this, you may be worried about your personal data.</p>
+                <p><strong>But don’t worry. There is a virtual machine called VMware.</strong></p>
+                <p>This tool provides another computer environment on your computer, and we can access that environment. It is completely separated from your personal data.</p>
+                <p>The virtual machine uses another operating system that is separate from your main system. VMware helps ensure that your personal data remains safe.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item glass-panel zoom-on-scroll">
+            <button class="faq-question" aria-expanded="false">
+              <span class="faq-number">05</span>
+              <span class="faq-title-text">How can you trust us?</span>
+              <span class="faq-chevron">&#9662;</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>You may worry that we could be scammers.</p>
+                <p>Actually, all payments are processed through your bank account, and you can control your payment account yourself, so you can feel comfortable.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="faq-item glass-panel zoom-on-scroll">
+            <button class="faq-question" aria-expanded="false">
+              <span class="faq-number">06</span>
+              <span class="faq-title-text">When the project development is finished, you will receive the payment from the client and then share the agreed amount with us.</span>
+              <span class="faq-chevron">&#9662;</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>In short, all payment transactions are handled under your supervision and control. Therefore, you can have confidence in the payment process.</p>
+                <p><strong>You don’t have to know about technology.</strong> You may not know much about IT technology, but don’t worry.</p>
+                <p>Your role is only to create an account, verify it, allow us to work on your computer, and share the agreed payment from the client with us. There are no technical requirements for you during this process.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 7 -->
+          <div class="faq-item glass-panel zoom-on-scroll">
+            <button class="faq-question" aria-expanded="false">
+              <span class="faq-number">07</span>
+              <span class="faq-title-text">What is your role? What do you have to do?</span>
+              <span class="faq-chevron">&#9662;</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p><strong>First:</strong> You have to create your account on your computer.</p>
+                <p><strong>Second:</strong> You have to verify your account and make sure that it is secure.</p>
+                <p><strong>Third:</strong> You should install VMware and allow us to work on your computer and manage the required work environment. You would also need to keep your computer powered on when remote access is required.</p>
+                <p><strong>Fourth:</strong> You have to notify us when the payment arrives from the client and share the agreed amount with us.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 8 -->
+          <div class="faq-item glass-panel zoom-on-scroll">
+            <button class="faq-question" aria-expanded="false">
+              <span class="faq-number">08</span>
+              <span class="faq-title-text">Which kind of payment system do we use?</span>
+              <span class="faq-chevron">&#9662;</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>We can use different payment systems depending on the project.</p>
+                <p>You can use a payment service such as PayPal or another mutually agreed payment method.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 9 -->
+          <div class="faq-item glass-panel zoom-on-scroll">
+            <button class="faq-question" aria-expanded="false">
+              <span class="faq-number">09</span>
+              <span class="faq-title-text">What kinds of work does our team do?</span>
+              <span class="faq-chevron">&#9662;</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>Our team mainly provides software development services for clients in different industries.</p>
+                <p>We work on web development, Android applications, AI-powered applications, backend systems, APIs, database development, and DevOps.</p>
+                <p>We also handle UI implementation, testing, maintenance, bug fixing, and ongoing technical support.</p>
+                <p>Depending on the project, we can work from the initial planning and development stage through testing, deployment, and maintenance.</p>
+                <p>Our team has experience working on both small projects and larger, long-term software development projects.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 10 -->
+          <div class="faq-item glass-panel zoom-on-scroll">
+            <button class="faq-question" aria-expanded="false">
+              <span class="faq-number">10</span>
+              <span class="faq-title-text">What if your computer performance is not good?</span>
+              <span class="faq-chevron">&#9662;</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>At first, you may need to install VMware and allocate some of your computer’s hardware resources to it, so your computer performance may not be very good.</p>
+                <p><strong>But don’t worry. After one or two months, we will buy a new computer for you, and you can allow us to work on that computer.</strong></p>
+                <p>This will be safer for your personal data and more comfortable for you.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. CONTACT BOX & CONTACT INFO SECTION -->
+    <section class="content-section" id="contact">
+      <div class="section-container">
+        <div class="section-header zoom-on-scroll">
+          <span class="section-tag">Get in Touch</span>
+          <h2 class="section-title">Contact Us</h2>
+          <div class="section-title-line"></div>
+          <p class="section-lead">
+            Ready to partner with us or have questions? Send us an email directly through the form below.
+          </p>
+        </div>
+
+        <div class="contact-layout">
+          <!-- Contact Info Cards -->
+          <div class="contact-info-col zoom-on-scroll">
+            <div class="contact-card glass-panel tilt-card">
+              <div class="contact-card-icon">&#9993;</div>
+              <div class="contact-card-body">
+                <h4>Direct Email</h4>
+                <p class="contact-detail" id="emailCopyText">bytepilot.pro@gmail.com</p>
+                <button type="button" class="btn-copy-small" data-copy="bytepilot.pro@gmail.com">
+                  <span class="copy-text">Copy Email</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- <div class="contact-card glass-panel tilt-card" style="transition-delay: 0.1s;">
+              <div class="contact-card-icon">&#128172;</div>
+              <div class="contact-card-body">
+                <h4>Telegram / Instant Chat</h4>
+                <p class="contact-detail">@NexatechTeam</p>
+                <span class="status-pill-small">&#9679; Available 24/7</span>
+              </div>
+            </div> -->
+
+            <div class="contact-card glass-panel tilt-card" style="transition-delay: 0.2s;">
+              <div class="contact-card-icon">&#127757;</div>
+              <div class="contact-card-body">
+                <h4>Global Operations</h4>
+                <p class="contact-detail">Expanding Worldwide from Asia to Europe & Americas</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Email Form -->
+          <div class="contact-form-col zoom-on-scroll" style="transition-delay: 0.15s;">
+            <div class="contact-box glass-panel">
+              <h3 class="contact-box-title">Send Us a Message</h3>
+              <p class="contact-box-desc">
+                Fill in your details below. Clicking send will prepare an email directly to our team.
+              </p>
+
+              <form id="contactForm" class="contact-form" novalidate>
+                <div class="form-group-row">
+                  <div class="form-group">
+                    <label for="userName">Your Name <span class="required">*</span></label>
+                    <input type="text" id="userName" name="name" placeholder="e.g. Alexander Smith" required autocomplete="name">
+                    <span class="error-msg" id="nameError"></span>
+                  </div>
+                  <div class="form-group">
+                    <label for="userEmail">Your Email Address <span class="required">*</span></label>
+                    <input type="email" id="userEmail" name="email" placeholder="e.g. alex@example.com" required autocomplete="email">
+                    <span class="error-msg" id="emailError"></span>
+                  </div>
+                </div>
+
+                <div class="form-group-row">
+                  <div class="form-group">
+                    <label for="userLocation">Country / Location</label>
+                    <input type="text" id="userLocation" name="location" placeholder="e.g. Germany, UK, France">
+                  </div>
+                  <div class="form-group">
+                    <label for="userSubject">Inquiry Subject</label>
+                    <select id="userSubject" name="subject">
+                      <option value="European Partnership Inquiry">European/American Partnership Inquiry</option>
+                      <option value="Account & VMware Clarification">Account & VMware Clarification</option>
+                      <option value="General Question">General Question</option>
+                      <option value="Other Cooperation">Other Cooperation</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="userMessage">Your Message <span class="required">*</span></label>
+                  <textarea id="userMessage" name="message" rows="5" placeholder="Tell us about yourself, your computer setup, or any questions you may have..." required></textarea>
+                  <span class="error-msg" id="messageError"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block shimmer-effect" id="sendBtn">
+                  <span>Send Email Message</span>
+                  <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"/></svg>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Interactive Lightbox Modal for Upwork Screenshots -->
+  <div class="lightbox-modal" id="lightboxModal" role="dialog" aria-modal="true" aria-label="Upwork Screenshot Viewer" hidden style="display: none;">
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox-dialog">
+      <div class="lightbox-top-bar">
+        <div class="lightbox-title-info">
+          <span class="lightbox-counter" id="lightboxCounter">1 / 4</span>
+          <span class="lightbox-caption" id="lightboxCaption">Upwork Screenshot</span>
+        </div>
+        <div class="lightbox-controls">
+          <button type="button" class="lightbox-btn" id="lightboxZoomOutBtn" title="Zoom Out (-)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+          </button>
+          <button type="button" class="lightbox-btn" id="lightboxZoomResetBtn" title="Reset Zoom">100%</button>
+          <button type="button" class="lightbox-btn" id="lightboxZoomInBtn" title="Zoom In (+)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+          </button>
+          <button type="button" class="lightbox-btn lightbox-close-btn" id="lightboxCloseBtn" title="Close (Esc)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="lightbox-image-stage" id="lightboxStage">
+        <button type="button" class="lightbox-nav-arrow arrow-prev" id="lightboxPrevBtn" title="Previous Image">&#10094;</button>
+        <div class="lightbox-img-wrapper" id="lightboxImgWrapper">
+          <img src="" alt="Enlarged Upwork Experience Screenshot" class="lightbox-current-img" id="lightboxCurrentImg">
+        </div>
+        <button type="button" class="lightbox-nav-arrow arrow-next" id="lightboxNextBtn" title="Next Image">&#10095;</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Message -->
+  <div class="toast-notification" id="toastNotification" role="alert" aria-live="assertive" hidden style="display: none;">
+    <div class="toast-icon" id="toastIcon">&#10004;</div>
+    <div class="toast-message" id="toastMessage">Action completed successfully</div>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <span class="brand-name">NEXA<span class="brand-highlight">TECH</span></span>
+        </div>
+        <p class="footer-tagline">
+          Over six years of software engineering excellence. Fostering global partnerships built on respect, privacy, and shared rewards.
+        </p>
+      </div>
+
+      <div class="footer-nav-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#goal">Our Goal</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#roles">The Role of Both Sides</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-nav-col">
+        <h5>Information</h5>
+        <ul>
+          <li><a href="#experience">Proven Experience</a></li>
+          <li><a href="#faq">Partnership FAQs</a></li>
+          <li><a href="#contact">Contact & Inquiries</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 NEXATECH. All rights reserved. Trusted Partnerships Worldwide.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

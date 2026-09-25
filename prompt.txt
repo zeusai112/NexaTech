@@ -1,0 +1,11 @@
+Please create an HTML website which has the content of the `req.md` file.
+The website should include the following features:
+- keep the content of req.md file in the website.
+- Apply a beautiful, professional landing page theme
+- use the beautiful and modern singapore city image as a background. 
+- Make it as a single page.
+- implement various beautiful and professional animation effects, such as zoom-in/zoom-out effects, that trigger when scrolling down the page.
+- Set the background image to a beautiful cityscape of Singapore.
+- Include a contact form that allows users to send emails.
+- please add the profile1.png, profile2.png, profile3.png, profile4.png as the upwork screenshots to prove our experience.
+- Design the overall color scheme to be soft and warm—complementing the background image while evoking a sense of happiness for visitors.
