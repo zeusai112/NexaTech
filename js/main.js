@@ -690,7 +690,7 @@ function initContactForm() {
       if (hasError) return;
 
       // Construct formatted email body
-      const emailRecipient = 'bytepilot.pro@gmail.com';
+      const emailRecipient = 'nexatech@zeusguy.xyz';
       const emailSubject = encodeURIComponent(`[NEXATECH Inquiry] ${subjectVal} from ${nameVal}`);
       const emailBody = encodeURIComponent(
         `Dear NEXATECH Team,\n\n` +
